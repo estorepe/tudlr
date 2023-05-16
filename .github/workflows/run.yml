@@ -4,15 +4,17 @@ env:
   glb: ${{ secrets.glb }}
 jobs:
   build:
-    runs-on: ubuntu-20.04
-    container: dazz111/yfd:latest
+    runs-on: ubuntu-latest
+    # container: dazz111/yfd:latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
       # Add your build and test steps here
       - name: Create step
         run: |
-          apt install libcurl4-openssl-dev libssl-dev zip -y
+          sudo apt update -y
+          sudo apt install libcurl4-openssl-dev libssl-dev zip -y
+          sudo apt install ffmpeg mkvtoolnix
           # while read line; do python3 tscr.py "$line" > /dev/null; echo "$line" | tee -a tsite-map-1.txt; done < tsite-map.txt
           bash run.sh
           # add commands to populate the "output" directory with files and folders

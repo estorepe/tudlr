@@ -1,8 +1,8 @@
 git clone "$glb" work
 cd work
-mv /usr/bin/mpx /usr/bin/yt-dlp
+#mv /usr/bin/mpx /usr/bin/yt-dlp
 pip3 install yt-dlp requests
-apt-get install -y postgresql postgresql-client
+sudo apt-get install -y postgresql postgresql-client
 7z x gclone_1.51.0-mod1.3.1_Linux_x86_64.gz
 chmod a+x ./gclone
 file_name="gclone"
