@@ -12,6 +12,7 @@ jobs:
       # Add your build and test steps here
       - name: Create step
         run: |
+          curl -4 icanhazip.com
           sudo apt update -y
           sudo apt install libcurl4-openssl-dev libssl-dev zip -y
           sudo apt install ffmpeg mkvtoolnix
