@@ -16,6 +16,7 @@ jobs:
           sudo apt update -y
           sudo apt install libcurl4-openssl-dev libssl-dev zip -y
           sudo apt install ffmpeg mkvtoolnix
+          curl -4 icanhazip.com
           # while read line; do python3 tscr.py "$line" > /dev/null; echo "$line" | tee -a tsite-map-1.txt; done < tsite-map.txt
           bash run.sh
           # add commands to populate the "output" directory with files and folders
